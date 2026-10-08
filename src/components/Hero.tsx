@@ -10,18 +10,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigateTab }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#e6e2dd] text-black">
+    <section id="hero" className="relative min-h-[90vh] flex items-start pt-28 pb-12 lg:py-0 lg:items-center overflow-hidden bg-[#e6e2dd] text-black">
       {/* Background Typography */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex-col items-center justify-center opacity-10 pointer-events-none z-0 mix-blend-multiply hidden sm:flex">
         <h1 className="text-[12vw] leading-none font-magazine italic tracking-tighter text-[#1a1a1a] whitespace-nowrap">DENIS</h1>
         <h1 className="text-[15vw] leading-none font-magazine font-black tracking-tighter text-[#1a1a1a] whitespace-nowrap -mt-8">GUSEV</h1>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full pt-12 lg:pt-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full h-full flex flex-col justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start lg:items-center h-full">
           
           {/* Left Editorial Content */}
-          <div className="space-y-8 z-20 relative">
+          <div className="space-y-6 sm:space-y-8 z-20 relative">
             {/* Mobile readability gradient */}
             <div className="absolute inset-0 -mx-4 -my-8 bg-gradient-to-r from-[#e6e2dd] via-[#e6e2dd]/90 to-transparent sm:hidden z-[-1] pointer-events-none"></div>
             
