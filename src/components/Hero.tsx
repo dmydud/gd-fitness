@@ -21,7 +21,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigateTab }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full pt-12 lg:pt-0">
           
           {/* Left Editorial Content */}
-          <div className="space-y-8 z-20">
+          <div className="space-y-8 z-20 relative">
+            {/* Mobile readability gradient */}
+            <div className="absolute inset-0 -mx-4 -my-8 bg-gradient-to-r from-[#e6e2dd] via-[#e6e2dd]/90 to-transparent sm:hidden z-[-1] pointer-events-none"></div>
+            
             <div className="inline-block border-b-2 border-black pb-1 mb-4">
               <span className="font-heading font-black tracking-widest text-xs uppercase">Exclusive Fit Editorial</span>
             </div>
@@ -63,13 +66,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigateTab }) => {
           </div>
 
           {/* Right Cutout Image */}
-          <div className="relative lg:absolute bottom-0 right-0 lg:right-10 w-full lg:w-1/2 h-[55vh] lg:h-[90vh] flex items-end justify-center lg:justify-end z-10 pointer-events-none -mt-12 lg:mt-0 overflow-hidden lg:overflow-visible">
+          <div className="absolute bottom-0 -right-4 sm:right-0 lg:right-10 w-[85%] sm:w-[70%] lg:w-1/2 h-[60vh] lg:h-[90vh] flex items-end justify-end z-10 pointer-events-none">
             {/* The Cutout Image */}
             <img
               src={`${import.meta.env.BASE_URL}trainer-cutout.png`}
               alt="Denis Gusev"
-              className={`max-h-full w-auto object-contain object-bottom drop-shadow-2xl transition-opacity duration-1000 pointer-events-auto ${imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
-              style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)' }}
+              className={`max-h-full w-auto object-contain object-right-bottom drop-shadow-2xl transition-opacity duration-1000 pointer-events-auto ${imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+              style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
               onLoad={() => setImageLoaded(true)}
               onError={(e) => {
                 e.currentTarget.src = `${import.meta.env.BASE_URL}trainer-hero.jpg`;
