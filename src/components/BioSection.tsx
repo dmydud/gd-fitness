@@ -78,7 +78,7 @@ export const BioSection: React.FC = () => {
               {/* Photo */}
               <div className="relative w-full aspect-[4/5] bg-black overflow-hidden shadow-inner">
                 <img 
-                  src="/trainer-vintage.png" 
+                  src={`${import.meta.env.BASE_URL}trainer-vintage.png`} 
                   alt="Денис Гусєв" 
                   className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-1000 contrast-[1.1] saturate-[0.9]"
                 />

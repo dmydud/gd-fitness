@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenB
           {/* Logo & Brand */}
           <div className="flex items-center gap-3 sm:gap-4 cursor-pointer min-w-0" onClick={() => handleNavClick('hero')}>
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-black/20 shrink-0">
-              <img src="/profile.png" alt="Denis Gusev" className="w-full h-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Denis Gusev" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col min-w-0">
               <span className="font-magazine text-xl sm:text-2xl font-black tracking-tight leading-none uppercase truncate">

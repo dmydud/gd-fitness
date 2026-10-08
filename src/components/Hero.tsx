@@ -66,13 +66,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigateTab }) => {
           <div className="absolute bottom-0 right-0 lg:right-10 w-full lg:w-1/2 h-[60vh] lg:h-[90vh] flex items-end justify-center lg:justify-end z-10 pointer-events-none">
             {/* The Cutout Image */}
             <img
-              src="/trainer-cutout.png"
+              src={`${import.meta.env.BASE_URL}trainer-cutout.png`}
               alt="Denis Gusev"
               className={`max-h-full w-auto object-contain object-bottom drop-shadow-2xl transition-opacity duration-1000 pointer-events-auto ${imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
               style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)' }}
               onLoad={() => setImageLoaded(true)}
               onError={(e) => {
-                e.currentTarget.src = "/trainer-hero.jpg";
+                e.currentTarget.src = `${import.meta.env.BASE_URL}trainer-hero.jpg`;
                 e.currentTarget.className = "max-h-full w-full object-cover rounded-sm grayscale contrast-125 pointer-events-auto";
               }}
             />
