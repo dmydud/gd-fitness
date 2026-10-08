@@ -12,7 +12,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigateTab }) => {
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#e6e2dd] text-black">
       {/* Background Typography */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center opacity-10 pointer-events-none z-0 mix-blend-multiply">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex-col items-center justify-center opacity-10 pointer-events-none z-0 mix-blend-multiply hidden sm:flex">
         <h1 className="text-[12vw] leading-none font-magazine italic tracking-tighter text-[#1a1a1a] whitespace-nowrap">DENIS</h1>
         <h1 className="text-[15vw] leading-none font-magazine font-black tracking-tighter text-[#1a1a1a] whitespace-nowrap -mt-8">GUSEV</h1>
       </div>
@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigateTab }) => {
               </p>
             </div>
 
-            <div className="flex items-center gap-6 pt-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-6">
               <button
                 onClick={onOpenBooking}
                 className="group flex items-center gap-4 bg-black text-white px-8 py-4 rounded-none hover:bg-gray-800 transition-colors"

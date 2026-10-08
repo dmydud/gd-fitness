@@ -58,15 +58,15 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenBooking })
                 </ul>
               </div>
 
-              <div className="lg:col-span-3 flex flex-row lg:flex-col justify-between items-center lg:items-end h-full">
-                <div className="text-right">
+              <div className="lg:col-span-3 flex flex-col justify-between items-start lg:items-end h-full gap-6">
+                <div className="text-left lg:text-right w-full pt-4 border-t border-black/10 lg:border-t-0 lg:pt-0">
                   <div className="text-4xl sm:text-5xl font-black font-magazine">{pkg.price}</div>
                   <div className="text-[10px] font-bold uppercase tracking-widest opacity-60 mt-1">{pkg.period}</div>
                 </div>
                 
                 <button
                   onClick={onOpenBooking}
-                  className={`mt-0 lg:mt-8 px-8 py-3 text-xs font-black uppercase tracking-[0.2em] transition-all border ${
+                  className={`w-full lg:w-auto px-8 py-4 text-xs font-black uppercase tracking-[0.2em] transition-all border ${
                     pkg.isPopular
                       ? 'bg-[#e6b800] text-black border-[#e6b800] hover:bg-white'
                       : 'bg-black text-white border-black group-hover:bg-[#e6b800] group-hover:text-black group-hover:border-[#e6b800]'
