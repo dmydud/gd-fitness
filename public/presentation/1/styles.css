@@ -212,24 +212,35 @@ td{color:#bdbab3}
 .pdfbtn{position:fixed;right:20px;top:16px;z-index:60;background:var(--acc);color:#000;border:0;border-radius:99px;padding:10px 16px;font-weight:800;font-size:13px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .2s}
 .pdfbtn:hover{transform:translateY(-2px)}
 
+/* appendix full mockup container */
+.app-mock-wrap{width:100%;max-width:1100px;margin-top:10px}
+.app-full-mock{width:100%;aspect-ratio:16/9;border-radius:var(--r);border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.5);position:relative;overflow:hidden;container-type:inline-size}
+
 /* mobile */
-@media(max-width:720px){
+@media(max-width:768px){
   html{scroll-snap-type:none}
-  .slide{min-height:auto;padding:72px 20px 56px}
-  h2{font-size:30px}
-  .lead{font-size:15px;margin-bottom:26px}
-  .card{padding:20px}
-  .cover{min-height:100svh;padding-bottom:40px}
-  .cover img{height:62vh;right:-30vw;opacity:.55}
-  .cover .meta{gap:18px;flex-direction:column}
-  .audit img{transform:none;max-width:260px}
-  .flow{flex-direction:column;align-items:stretch}.flow .arr{text-align:center;transform:rotate(90deg)}
-  .cal{grid-template-columns:1fr}.cal div{min-height:auto}
-  .dir .info{flex-direction:column}
-  .formdemo{padding:20px;max-width:none}
-  table{font-size:13px;min-width:640px}
-  .pdfbtn{top:auto;bottom:16px;right:16px}
-  #counter{display:none}
+  .slide{min-height:auto;padding:64px 18px 48px;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(26px,7vw,34px);line-height:1.15;max-width:none}
+  .lead{font-size:15px;line-height:1.45;margin-bottom:24px}
+  .card{padding:18px}
+  .cover{min-height:92svh;padding-bottom:36px;justify-content:flex-end}
+  .cover img{height:54vh;right:-25vw;opacity:.4;filter:grayscale(1) contrast(1.15)}
+  .cover .bigname{font-size:clamp(52px,16vw,84px);line-height:.88}
+  .cover .meta{gap:14px;flex-direction:column;margin-top:24px}
+  .audit{grid-template-columns:1fr;gap:20px}
+  .audit img{transform:none;max-width:240px;margin:0 auto}
+  .flow{flex-direction:column;align-items:stretch;gap:8px}
+  .flow .arr{text-align:center;transform:rotate(90deg);margin:-2px 0}
+  .cal{grid-template-columns:1fr;gap:8px}
+  .cal div{min-height:auto;padding:12px}
+  .dirs{grid-template-columns:1fr;gap:16px}
+  .dir .info{flex-direction:column;gap:10px}
+  .formdemo{padding:18px;max-width:none}
+  .tablewrap{margin:0 -2px}
+  table{font-size:13px;min-width:540px}
+  .pdfbtn{top:auto;bottom:16px;right:16px;padding:11px 18px;font-size:13px;text-decoration:none}
+  #counter,#dots{display:none}
+  .app-full-mock{aspect-ratio:16/10}
 }
 
 /* print → landscape PDF */
@@ -286,10 +297,8 @@ td{color:#bdbab3}
   .flow .step{padding:6pt 8pt;font-size:8.5pt}
   .cal div{min-height:auto;padding:6pt;font-size:8pt}
 
-  /* Form & Interactive elements in print */
-  .formdemo{padding:14pt;border-radius:10px}
-  .formdemo input{padding:6pt;font-size:9pt}
-  .ws textarea{min-height:45px;padding:6pt;font-size:8.5pt}
-  #s-ws{min-height:auto}
-  #summaryCard{display:block!important}
+  /* Appendix full slides in print */
+  .appendix-slide{justify-content:flex-start}
+  .app-mock-wrap{margin-top:6pt}
+  .app-full-mock{aspect-ratio:16/9;width:100%;max-height:135mm}
 }
